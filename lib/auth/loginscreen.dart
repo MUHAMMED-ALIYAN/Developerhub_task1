@@ -15,7 +15,7 @@ class _LoginscreenState extends State<Loginscreen> {
 
   RegExp emailRegex = RegExp(r'^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$');
   RegExp regpassword = RegExp(
-    '^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#\$%&\*])(?=.{8,})',
+    '^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#\$%&*])(?=.{8,})',
   );
   bool showPassword = true;
 
@@ -34,7 +34,7 @@ class _LoginscreenState extends State<Loginscreen> {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 SizedBox(height: 20),
-                Container(
+                SizedBox(
                   height: 300,
                   width: 300,
                   child: Image.asset("assets/images/login.png"),

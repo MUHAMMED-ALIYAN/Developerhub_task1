@@ -50,7 +50,7 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
                 child: const Text(
-                  'This is your new modern home screen in a soft purple theme. You can customize it further as needed.',
+                  'This is the task 1 of developers hub internship this task include loginpage , signupage with navigation to homepage.',
                   style: TextStyle(fontSize: 18, color: Colors.black87),
                 ),
               ),

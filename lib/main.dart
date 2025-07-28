@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_framework/responsive_framework.dart';
+import 'package:ui_project/screens/homescreen.dart';
 
 import 'package:ui_project/screens/splashscreen.dart';
 
@@ -12,7 +14,8 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false,
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
@@ -32,7 +35,29 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: splash_screen()
+      builder: (context, widget) => ResponsiveBreakpoints.builder(
+        child: Builder(
+          builder: (context) {
+            return ResponsiveScaledBox(
+              width: ResponsiveValue<double?>(
+                context,
+                defaultValue: null,
+                conditionalValues: [
+                  const Condition.equals(name: PHONE, value: 450),
+                ],
+              ).value,
+              child: ClampingScrollWrapper.builder(context, widget!),
+            );
+          },
+        ),
+        breakpoints: [
+          const Breakpoint(start: 0, end: 450, name: PHONE),
+          const Breakpoint(start: 451, end: 750, name: MOBILE),
+          const Breakpoint(start: 751, end: 1080, name: TABLET),
+          const Breakpoint(start: 1081, end: double.infinity, name: DESKTOP),
+        ],
+      ),
+      home: HomeScreen(),
     );
   }
 }

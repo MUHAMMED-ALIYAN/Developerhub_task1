@@ -18,7 +18,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
   TextEditingController name = TextEditingController();
   RegExp emailRegex = RegExp(r'^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$');
   RegExp regpassword = RegExp(
-    '^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#\$%&\*])(?=.{8,})',
+    '^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#\$%&*])(?=.{8,})',
   );
 
   GlobalKey<FormState> formState = GlobalKey<FormState>();
@@ -35,7 +35,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
             child: Column(
               children: [
                 SizedBox(height: 20),
-                Container(
+                SizedBox(
                   height: 300,
                   width: 300,
                   child: Image.asset("assets/images/sign.png"),

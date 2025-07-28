@@ -22,10 +22,10 @@ class _onboardingState extends State<onboarding> {
         //appBar: CustomAppBar(title: "onboarding"),
         body: Column(
           children: [
-            Padding(
-              padding: const EdgeInsets.only(top: 40, left: 590),
+            Align(
+              alignment: Alignment.topRight,
               child: CustomTextButton(
-               text: currentindex == 2 ? "SKIP" : "",
+                text: currentindex == 2 ? "SKIP" : "",
 
                 textStyle: TextStyle(
                   fontSize: 40,
@@ -33,7 +33,6 @@ class _onboardingState extends State<onboarding> {
                   color: Color.fromARGB(255, 211, 62, 211),
                 ),
                 onPressed: () {
-                  
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) => TabbarScreen()),
@@ -50,16 +49,14 @@ class _onboardingState extends State<onboarding> {
                 },
                 children: [
                   Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.only(top: 200),
-                        child: SizedBox(
-                          height: 500,
-                          width: 500,
-                          child: Image.asset(
-                            "assets/images/onb1.png",
-                            fit: BoxFit.fill,
-                          ),
+                      SizedBox(
+                        height: 300,
+                        width: 300,
+                        child: Image.asset(
+                          "assets/images/onb1.png",
+                          fit: BoxFit.fill,
                         ),
                       ),
                       Text(
@@ -73,16 +70,14 @@ class _onboardingState extends State<onboarding> {
                     ],
                   ),
                   Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.only(top: 200),
-                        child: SizedBox(
-                          height: 500,
-                          width: 500,
-                          child: Image.asset(
-                            "assets/images/onb2.png",
-                            fit: BoxFit.fill,
-                          ),
+                      SizedBox(
+                        height: 300,
+                        width: 300,
+                        child: Image.asset(
+                          "assets/images/onb2.png",
+                          fit: BoxFit.fill,
                         ),
                       ),
                       Text(
@@ -96,16 +91,14 @@ class _onboardingState extends State<onboarding> {
                     ],
                   ),
                   Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.only(top: 200),
-                        child: SizedBox(
-                          height: 500,
-                          width: 500,
-                          child: Image.asset(
-                            "assets/images/onb3.png",
-                            fit: BoxFit.fill,
-                          ),
+                      SizedBox(
+                        height: 300,
+                        width: 300,
+                        child: Image.asset(
+                          "assets/images/onb3.png",
+                          fit: BoxFit.fill,
                         ),
                       ),
                       SizedBox(height: 20),
@@ -122,25 +115,22 @@ class _onboardingState extends State<onboarding> {
                 ],
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(bottom: 30, left: 270),
-              child: Row(
-                spacing: 10,
-                children: List.generate(
-                  3,
-                  (index) => Container(
-                    width: currentindex == index ? 40 : 20,
-                    height: currentindex == index ? 40 : 20,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(40),
-                      color: currentindex == index
-                          ? const Color.fromARGB(255, 221, 78, 247)
-                          : Colors.grey,
-                    ),
+            Row(mainAxisAlignment: MainAxisAlignment.center,
+              spacing: 10,
+              children: List.generate(
+                3,
+                (index) => Container(
+                  width: currentindex == index ? 40 : 20,
+                  height: currentindex == index ? 40 : 20,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(40),
+                    color: currentindex == index
+                        ? const Color.fromARGB(255, 221, 78, 247)
+                        : Colors.grey,
                   ),
                 ),
               ),
-            ),
+            ),SizedBox(height: 10,),
           ],
         ),
       ),

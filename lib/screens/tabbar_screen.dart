@@ -20,11 +20,12 @@ class _TabbarScreenState extends State<TabbarScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Center(
-              child: ClipRRect(borderRadius: BorderRadius.circular(30),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(30),
                 child: Container(
-                  height: MediaQuery.of(context).size.height * 0.9,
-                
-                  width: 600,
+                  height: 800,
+
+                  width: 450,
                   decoration: BoxDecoration(
                     color: const Color.fromARGB(255, 248, 248, 248),
                     // borderRadius: BorderRadius.all(Radius.circular(30)),
@@ -93,7 +94,7 @@ class _TabbarScreenState extends State<TabbarScreen> {
                             ),
                           ),
                         ),
-                
+
                         // Tab content
                         Expanded(
                           child: TabBarView(

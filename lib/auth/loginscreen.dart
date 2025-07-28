@@ -28,19 +28,19 @@ class _LoginscreenState extends State<Loginscreen> {
       body: SafeArea(
         child: Form(
           key: formState,
-          child: Padding(
-            padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                SizedBox(height: 20),
-                SizedBox(
-                  height: 300,
-                  width: 300,
-                  child: Image.asset("assets/images/login.png"),
-                ),
-                SizedBox(height: 50),
-                TextFormField(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              SizedBox(height: 20),
+              SizedBox(
+                height: 200,
+                width: 200,
+                child: Image.asset("assets/images/login.png"),
+              ),
+              SizedBox(height: 20),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: TextFormField(
                   validator: (value) {
                     if (value!.isEmpty) {
                       return "Required";
@@ -80,8 +80,11 @@ class _LoginscreenState extends State<Loginscreen> {
                     ),
                   ),
                 ),
-                SizedBox(height: 20),
-                TextFormField(
+              ),
+              SizedBox(height: 20),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: TextFormField(
                   validator: (value) {
                     if (value!.isEmpty) {
                       return "Required";
@@ -130,8 +133,11 @@ class _LoginscreenState extends State<Loginscreen> {
                     ),
                   ),
                 ),
-                SizedBox(height: 50),
-                CustomElevatedButton(
+              ),
+              SizedBox(height: 30),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: CustomElevatedButton(
                   text: "LOGIN",
                   onPressed: () {
                     if (formState.currentState!.validate()) {
@@ -146,64 +152,64 @@ class _LoginscreenState extends State<Loginscreen> {
                   foregroundColor: Colors.white,
                   elevation: 15,
                   borderRadius: 20,
-                  width: double.infinity,
-                  height: 65,
+                  // width: 50,
+                  // height: 65,
                   textStyle: TextStyle(
                     fontSize: 25,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                SizedBox(height: 30),
-                Center(
-                  child: Text(
-                    "OR",
+              ),
+              SizedBox(height: 7),
+              Center(
+                child: Text(
+                  "OR",
+                  style: TextStyle(
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black,
+                  ),
+                ),
+              ),
+              SizedBox(height: 3),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "Login with",
                     style: TextStyle(
-                      fontSize: 30,
-                      fontWeight: FontWeight.bold,
+                      fontSize: 25,
+                      fontWeight: FontWeight.w400,
                       color: Colors.black,
                     ),
                   ),
-                ),
-                SizedBox(height: 20),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      "Login with",
-                      style: TextStyle(
-                        fontSize: 25,
-                        fontWeight: FontWeight.w400,
-                        color: Colors.black,
+                  SizedBox(width: 20),
+                  Container(
+                    height: 55,
+                    width: 60,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12),
+                      color: Colors.white,
+                      image: DecorationImage(
+                        image: AssetImage("assets/images/fl.png"),
                       ),
                     ),
-                    SizedBox(width: 20),
-                    Container(
-                      height: 55,
-                      width: 60,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(12),
-                        color: Colors.white,
-                        image: DecorationImage(
-                          image: AssetImage("assets/images/fl.png"),
-                        ),
+                  ),
+                  SizedBox(width: 20),
+                  Container(
+                    height: 55,
+                    width: 60,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12),
+                      color: Colors.white,
+                      image: DecorationImage(
+                        image: AssetImage("assets/images/gl.png"),
                       ),
                     ),
-                    SizedBox(width: 20),
-                    Container(
-                      height: 55,
-                      width: 60,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(12),
-                        color: Colors.white,
-                        image: DecorationImage(
-                          image: AssetImage("assets/images/gl.png"),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ],
-            ),
+                  ),
+                ],
+              ),
+            ],
           ),
         ),
       ),

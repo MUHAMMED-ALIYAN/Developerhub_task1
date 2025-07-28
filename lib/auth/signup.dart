@@ -30,30 +30,29 @@ class _SignUpScreenState extends State<SignUpScreen> {
       body: SafeArea(
         child: Form(
           key: formState,
-          child: Padding(
-            padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
+          child: SingleChildScrollView(
             child: Column(
               children: [
-                SizedBox(height: 20),
+                // SizedBox(height: 10),
                 SizedBox(
-                  height: 300,
-                  width: 300,
+                  height: 250,
+                  width: 250,
                   child: Image.asset("assets/images/sign.png"),
                 ),
-                SizedBox(height: 50),
-
+                SizedBox(height: 10),
+            
                 Container(
-                  // margin: EdgeInsets.all(10),
+                  margin: EdgeInsets.all(5),
                   child: TextFormField(
                     validator: (value) {
                       if (value!.isEmpty) {
                         return "Required";
                       }
-
+            
                       return null;
                     },
                     controller: name,
-
+            
                     keyboardType: TextInputType.visiblePassword,
                     decoration: InputDecoration(
                       fillColor: Colors.white,
@@ -64,7 +63,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         color: const Color.fromARGB(255, 182, 175, 175),
                         // fontSize: 30
                       ),
-
+            
                       prefixIcon: Icon(
                         Icons.type_specimen,
                         size: 30,
@@ -90,9 +89,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     ),
                   ),
                 ),
-                SizedBox(height: 20),
+                // SizedBox(height: 10),
                 Container(
-                  // margin: EdgeInsets.all(10),
+                  margin: EdgeInsets.all(5),
                   child: TextFormField(
                     validator: (value) {
                       if (value!.isEmpty) {
@@ -103,7 +102,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       return null;
                     },
                     controller: email,
-
+            
                     keyboardType: TextInputType.visiblePassword,
                     decoration: InputDecoration(
                       fillColor: Colors.white,
@@ -114,7 +113,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         color: const Color.fromARGB(255, 182, 175, 175),
                         // fontSize: 30
                       ),
-
+            
                       prefixIcon: Icon(
                         Icons.email,
                         size: 30,
@@ -140,9 +139,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     ),
                   ),
                 ),
-                SizedBox(height: 20),
+                // SizedBox(height: 5),
                 Container(
-                  // margin: EdgeInsets.all(10),
+                  margin: EdgeInsets.all(5),
                   child: TextFormField(
                     validator: (value) {
                       if (value!.isEmpty) {
@@ -154,7 +153,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     },
                     controller: password,
                     obscureText: showPassword,
-
+            
                     keyboardType: TextInputType.visiblePassword,
                     decoration: InputDecoration(
                       fillColor: Colors.white,
@@ -172,7 +171,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         },
                         child: Icon(Icons.remove_red_eye),
                       ),
-
+            
                       prefixIcon: Icon(
                         Icons.password_outlined,
                         size: 30,
@@ -198,7 +197,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     ),
                   ),
                 ),
-                SizedBox(height: 50),
+                SizedBox(height: 15),
                 CustomElevatedButton(
                   text: "signup".toUpperCase(),
                   onPressed: () {
@@ -213,14 +212,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   foregroundColor: Colors.white,
                   elevation: 15,
                   borderRadius: 20,
-                  width: double.infinity,
+                  width: 400,
                   height: 65,
-                  textStyle: TextStyle(
-                    fontSize: 25,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  textStyle: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                 ),
-                SizedBox(height: 30),
+                SizedBox(height: 10),
                 Text(
                   "OR",
                   style: TextStyle(
@@ -229,8 +225,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     color: Colors.black,
                   ),
                 ),
-                SizedBox(height: 20),
-
+                // SizedBox(height: 10),
+            
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -246,7 +242,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     Container(
                       height: 55,
                       width: 60,
-
+            
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(12),
                         color: const Color.fromARGB(255, 255, 255, 255),
@@ -259,7 +255,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     Container(
                       height: 55,
                       width: 60,
-
+            
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(12),
                         color: const Color.fromARGB(255, 255, 255, 255),

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:ui_project/screens/homescreen.dart';
-
 import 'package:ui_project/screens/splashscreen.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -57,7 +57,7 @@ class MyApp extends StatelessWidget {
           const Breakpoint(start: 1081, end: double.infinity, name: DESKTOP),
         ],
       ),
-      home: HomeScreen(),
+      home: splash_screen(),
     );
   }
 }

@@ -51,14 +51,14 @@ class _onboardingState extends State<onboarding> {
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      SizedBox(
+                      
                         height: 300,
                         width: 300,
                         child: Image.asset(
                           "assets/images/onb1.png",
                           fit: BoxFit.fill,
                         ),
-                      ),
+                     
                       Text(
                         "FRESH FOOD",
                         style: TextStyle(
@@ -72,14 +72,14 @@ class _onboardingState extends State<onboarding> {
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      SizedBox(
+                      
                         height: 300,
                         width: 300,
                         child: Image.asset(
                           "assets/images/onb2.png",
                           fit: BoxFit.fill,
                         ),
-                      ),
+                     
                       Text(
                         "FAST DELIVERY",
                         style: TextStyle(
@@ -93,14 +93,14 @@ class _onboardingState extends State<onboarding> {
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      SizedBox(
+                      
                         height: 300,
                         width: 300,
                         child: Image.asset(
                           "assets/images/onb3.png",
                           fit: BoxFit.fill,
                         ),
-                      ),
+                     
                       SizedBox(height: 20),
                       Text(
                         "EASY PAYMENT",

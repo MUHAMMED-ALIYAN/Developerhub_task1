@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:ui_project/screens/tabbar_screen.dart';
-
-import 'package:ui_project/widgets/custom_btns.dart';
+import 'package:vpn_ui/widgets/cstmbtn.dart' show CustomTextButton;
 
 class onboarding extends StatefulWidget {
   const onboarding({super.key});
@@ -51,14 +49,14 @@ class _onboardingState extends State<onboarding> {
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      
+                      SizedBox(
                         height: 300,
                         width: 300,
                         child: Image.asset(
-                          "assets/images/onb1.png",
+                          "assets/images/onb2.png",
                           fit: BoxFit.fill,
                         ),
-                     
+                      ),
                       Text(
                         "FRESH FOOD",
                         style: TextStyle(
@@ -72,14 +70,15 @@ class _onboardingState extends State<onboarding> {
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      
+                      SizedBox(
                         height: 300,
                         width: 300,
                         child: Image.asset(
                           "assets/images/onb2.png",
                           fit: BoxFit.fill,
                         ),
-                     
+                      ),
+
                       Text(
                         "FAST DELIVERY",
                         style: TextStyle(
@@ -93,14 +92,15 @@ class _onboardingState extends State<onboarding> {
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      
+                      SizedBox(
                         height: 300,
                         width: 300,
                         child: Image.asset(
-                          "assets/images/onb3.png",
+                          "assets/images/onb2.png",
                           fit: BoxFit.fill,
                         ),
-                     
+                      ),
+
                       SizedBox(height: 20),
                       Text(
                         "EASY PAYMENT",
@@ -115,7 +115,8 @@ class _onboardingState extends State<onboarding> {
                 ],
               ),
             ),
-            Row(mainAxisAlignment: MainAxisAlignment.center,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               spacing: 10,
               children: List.generate(
                 3,
@@ -130,7 +131,8 @@ class _onboardingState extends State<onboarding> {
                   ),
                 ),
               ),
-            ),SizedBox(height: 10,),
+            ),
+            SizedBox(height: 10),
           ],
         ),
       ),
